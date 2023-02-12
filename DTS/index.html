@@ -59,6 +59,25 @@
                             var updateButton = document.createElement('button');
                             var deleteDefect = currentDefect.insertCell(9);
                             var deleteButton = document.createElement('button');
-    
+                            
+                            defectID.innerHTML = defect._id;
+                            projectName.innerHTML = defect.Project;
+                            bugType.innerHTML = defect.BugID;
+                            defectDesc.innerHTML = defect.Description;
+                            operatingSys.innerHTML = defect.OperatingSystem;
+                            priority.innerHTML = defect.Priority;
+                            asignee.innerHTML = defect.AssignedTo;
+                            status.innerHTML = defect.Status;
+                            updateButton.innerHTML = "Update";
+                            deleteButton.innerHTML = "Delete";
+                            updateDefect.appendChild(updateButton);
+                            deleteDefect.appendChild(deleteButton);
+                        }
+                    })
+                })
+            </script>
+        </tbody>
+        </table>
+    </div>
 </body>
 </html>
