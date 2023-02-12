@@ -26,25 +26,6 @@ mongoose.connect(db.mongoURI,{
 require("./config/defectTrackerSchema.js");
 var DefectList = mongoose.model("defectList");
 
-// Main route
-app.get("/", function(req, res){
-    res.redirect('newBug.html');
-});
-
-app.get("/getDefectList", function(req,res){
-    DefectList.find({}).then(function(index){
-        res.json({index});
-    });
-});
-
-app.get("/addBugPage", function(req,res){
-    console.log("add a new bug?");
-})
-
-app.get("/deleteDefect", function(req,res){
-    console.log("Delete requested.");
-})
-
 app.listen(port, function(){
     console.log(`Running on port ${port}.`);
 })
